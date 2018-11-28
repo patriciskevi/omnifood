@@ -63,14 +63,14 @@ h2:after {
 
 h3 {
   font-size: 120%;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-top: 20px;
 }
 /* -------- PARAGRAPHS -------- */
 .long-copy {
   line-height: 145%;
 
-  margin-left: 0 auto;
+  margin: 0 auto;
 }
 
 .features-box > p {
@@ -85,7 +85,6 @@ h3 {
   color: #e67e22;
   margin-bottom: 10px;
   margin-top: 10px;
-  text-align: center;
 }
 
 /* -------- BUTTONS -------- */
@@ -134,14 +133,14 @@ header {
 
 .hero-text-box {
   position: absolute;
-  width: 1140px;
+  max-width: 1240px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 nav {
-  max-width: 1140px;
+  max-width: 1240px;
   margin: auto;
 }
 
@@ -165,6 +164,7 @@ ul {
 .main-nav > li {
   display: inline-block;
   margin-left: 40px;
+  position: relative;
 }
 
 .main-nav > li > a:link,
@@ -177,10 +177,25 @@ ul {
   border-bottom: 2px solid transparent;
 }
 
-.main-nav > li > a:hover,
+/* .main-nav > li > a:hover,
 .main-nav > li > a:active {
   border-bottom: 2px solid #e67e22;
   transition: border-bottom 250ms;
+} */
+
+.main-nav > li > span {
+  position: absolute;
+  margin-top: 15px;
+  bottom: -5px;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background: #e67e22;
+  transition: all 0.4s;
+}
+
+.main-nav > li:hover > span {
+  width: 100%;
 }
 
 /* -------------------------------- */
@@ -192,7 +207,7 @@ ul {
 }
 
 .features-columns {
-  max-width: 1140px;
+  max-width: 1240px;
   display: flex;
   margin: 0 auto;
 }
@@ -203,5 +218,28 @@ ul {
 
 .features-box {
   width: 25%;
-  padding: 3%;
+  padding: 1.5rem;
+}
+
+/* -------------------------------- */
+/* MEALS */
+/* -------------------------------- */
+.favourite-meals {
+  padding: 0;
+}
+
+.meals-showcase {
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.meals-showcase > img {
+  width: 100%;
+  transform: scale(1.2);
+}
+
+.meals-showcase > img:hover {
+  transform: scale(1.03);
 }
