@@ -1,4 +1,4 @@
-/* color: #e67e22 */
+/* orange color: #e67e22 */
 
 /* -------------------------------- */
 /* BASIC SETUP */
@@ -73,7 +73,8 @@ h3 {
   margin: 0 auto;
 }
 
-.features-box > p {
+.features-box,
+.paragraph-text {
   font-size: 90%;
   line-height: 145%;
 }
@@ -191,7 +192,7 @@ ul {
   width: 0%;
   height: 2px;
   background: #e67e22;
-  transition: all 0.4s;
+  transition: all 0.3s;
 }
 
 .main-nav > li:hover > span {
@@ -245,10 +246,112 @@ ul {
   width: 100%;
   transform: scale(1.3);
   transition: all 0.4s;
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
 .meals-showcase > li > img:hover {
   transform: scale(1.03);
   opacity: 1;
+}
+
+/* -------------------------------- */
+/* HOW IT WORKS */
+/* -------------------------------- */
+.how-it-works {
+  background-color: #f4f4f4;
+}
+
+.steps-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "iphone-logo steps";
+}
+
+.iphone-logo {
+  margin-left: 150px;
+  margin-right: 60px;
+}
+
+.iphone-logo > img {
+  height: 500px;
+  width: auto;
+  margin-top: 60px;
+  grid-area: iphone-logo;
+}
+
+.steps {
+  margin-top: 130px;
+}
+
+.steps > ul {
+  list-style: none;
+  grid-area: steps;
+}
+
+.steps .work-steps:nth-child(3) {
+  margin-bottom: 80px;
+}
+
+.work-steps {
+  margin-bottom: 40px;
+}
+
+.work-steps > div {
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  font-size: 1.6rem;
+  padding: 5px;
+  margin-right: 25px;
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.work-steps > p {
+  display: inline-block;
+}
+
+.btn-app > img {
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
+}
+
+/* -------------------------------- */
+/* CITIES */
+/* -------------------------------- */
+
+.cities-grid {
+  display: grid;
+  max-width: 1240px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 25%);
+  grid-column-gap: 30px;
+}
+
+.cities {
+  width: 100%;
+}
+
+.cities > img {
+  height: auto;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.cities-info > p {
+  line-height: 1.5rem;
+}
+
+.cities-info > p > .icon-small {
+  color: #e67e22;
+  margin-right: 15px;
+}
+
+.cities-info > p > a {
+  color: #e67e22;
+  text-decoration: none;
 }
