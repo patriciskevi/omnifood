@@ -66,6 +66,23 @@ h3 {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
+/* -------- LINKS -------- */
+a:link,
+a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid #e67e22;
+  padding-top: 2px;
+  transition: all 0.2s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
 /* -------- PARAGRAPHS -------- */
 .long-copy {
   line-height: 145%;
@@ -86,6 +103,16 @@ h3 {
   color: #e67e22;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 /* -------- BUTTONS -------- */
@@ -207,19 +234,21 @@ ul {
   margin: 0 auto;
 }
 
-.features-columns {
+.features-grid {
   max-width: 1240px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
   margin: 0 auto;
+  grid-column-gap: 40px;
 }
 
 .long-copy {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .features-box {
-  width: 25%;
-  padding: 1.5rem;
+  /* width: 25%;
+  padding: 1.5rem; */
 }
 
 /* -------------------------------- */
@@ -314,6 +343,11 @@ ul {
   display: inline-block;
 }
 
+.btn-app:link,
+.btn-app:visited {
+  border-bottom: 0;
+}
+
 .btn-app > img {
   height: 50px;
   width: auto;
@@ -332,26 +366,8 @@ ul {
   grid-column-gap: 30px;
 }
 
-.cities {
-  width: 100%;
-}
-
 .cities > img {
   height: auto;
   width: 100%;
-  margin-top: 30px;
-}
-
-.cities-info > p {
-  line-height: 1.5rem;
-}
-
-.cities-info > p > .icon-small {
-  color: #e67e22;
-  margin-right: 15px;
-}
-
-.cities-info > p > a {
-  color: #e67e22;
-  text-decoration: none;
+  margin-top: 15px;
 }
