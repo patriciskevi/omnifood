@@ -85,8 +85,8 @@ a:active {
 
 /* -------- PARAGRAPHS -------- */
 .long-copy {
+  width: 60%;
   line-height: 145%;
-
   margin: 0 auto;
 }
 
@@ -156,6 +156,7 @@ header {
     url("/resources/css/img/hero.jpg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -237,7 +238,7 @@ ul {
 .features-grid {
   max-width: 1240px;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
   grid-column-gap: 40px;
 }
@@ -261,7 +262,7 @@ ul {
 .meals-showcase {
   width: 100%;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(4, 1fr);
   list-style: none;
 }
 
@@ -362,7 +363,7 @@ ul {
   display: grid;
   max-width: 1240px;
   margin: 0 auto;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 30px;
 }
 
@@ -370,4 +371,53 @@ ul {
   height: auto;
   width: 100%;
   margin-top: 15px;
+}
+
+/* -------------------------------- */
+/* TESTIMONIALS */
+/* -------------------------------- */
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/resources/css/img/back-customers.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.testimonials-grid {
+  display: grid;
+  max-width: 1240px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  text-align: left;
+}
+
+blockquote {
+  font-style: italic;
+  line-height: 1.5rem;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 5rem;
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: -9px;
+}
+
+cite {
+  font-size: 0.9rem;
+  margin-top: 30px;
+  display: block;
+}
+
+cite > img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
 }
