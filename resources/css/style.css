@@ -118,9 +118,9 @@ a:active {
 /* -------- BUTTONS -------- */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+button[type="submit"] {
   display: inline-block;
-  color: #fff;
   padding: 10px 30px;
   font-weight: 300;
   text-decoration: none;
@@ -130,21 +130,36 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+button[type="submit"] {
   background-color: #e67e22;
   margin-right: 15px;
+  color: #fff;
+  border: 1px solid #e67e22;
+}
+
+.btn-full:hover,
+.btn-full:active,
+button[type="submit"]:hover {
+  border: 1px solid #cf6d17;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
   color: #e67e22;
+  border: 1px solid #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #cf6d17;
+  color: #fff;
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+button[type="submit"]:hover {
   background-color: #cf6d17;
-  color: #fff;
-  border: 1px solid #cf6d17;
 }
 
 /* -------------------------------- */
@@ -488,67 +503,113 @@ cite > img {
 /* -------------------------------- */
 /* CONTACT FORM */
 /* -------------------------------- */
+form {
+  margin-top: 40px;
+}
+
 .contact-form-grid {
-  max-width: 1240px;
+  margin-top: 40px;
+  width: 60%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 15px 20px;
 }
 
-#form {
-  background-color: rgb(250, 250, 250);
-  width: 50vw;
-  border-radius: 6px;
-  margin: auto;
-  font-family: "Roboto", sans-serif;
-  padding: 15px 0;
+*:focus {
+  outline: 0 none;
 }
 
-.labels {
-  display: inline-block;
+input,
+select,
+textarea {
+  width: 70%;
+}
+
+input,
+label,
+textarea {
+  padding: 4px;
+}
+
+label {
   text-align: right;
-  vertical-align: top;
-  width: 40%;
-  padding: 5px;
-}
-
-.input-tab {
-  display: inline-block;
-  vertical-align: middle;
-  width: 48%;
-  text-align: left;
-  padding: 5px;
-}
-
-.input-field {
-  width: 250px;
-  padding: 5px;
-}
-
-ul li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 button {
-  margin-top: 20px;
-  width: 90px;
-  height: 45px;
-  border-radius: 5px;
-  background-color: #f06292;
+  width: 130px;
+  grid-column: 2 / 3;
+}
+
+input[type="checkbox"] {
+  margin-top: 8px;
+}
+
+input[placeholder],
+textarea[placeholder] {
+  font-weight: 300;
+}
+
+/* 
+fieldset {
+  max-width: 1240px;
+  padding: 4px;
+  margin: 0 auto;
+  border: 0 none;
+}
+
+input,
+output,
+textarea,
+select,
+button {
+  box-sizing: border-box;
+  padding: 0.2em 0.4em;
+  margin: 0.2em 0;
+  outline: 0 none;
+  border: 0 none;
+  box-shadow: none;
+}
+
+label {
+  box-sizing: border-box;
+  user-select: none;
   cursor: pointer;
-  color: #ffffff;
-  font-size: 1rem;
 }
 
-#dropdown {
-  height: 25px;
+input:focus + label,
+textarea:focus + label,
+select:focus + label {
+  color: #e67e22;
 }
 
-.checkbox,
-.radio {
-  position: relative;
-  left: -43px;
-  margin-right: -30px;
+input,
+output,
+textarea,
+select {
+  grid-column: 2 / 4;
+  width: auto;
+  margin: 0;
 }
+
+button {
+  grid-column: 2 / 4;
+  width: 100px;
+}
+
+.btn-full input[type="checkbox"] {
+  grid-column: 1 / 3;
+  justify-self: end;
+  margin: 0;
+}
+
+label,
+input[type="checkbox"] + label {
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+textarea + label {
+  align-self: flex-start;
+} */
