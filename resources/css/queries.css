@@ -203,6 +203,7 @@
     .section-plans .container {
         grid-template-columns: 1fr;
         grid-column-gap: 40px;
+        width: 70%;
     }
 
     .section-plans .container .plans-box h3,
